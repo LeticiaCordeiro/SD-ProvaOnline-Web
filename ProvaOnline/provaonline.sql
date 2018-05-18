@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.6
+-- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 17/05/2018 às 04:52
--- Versão do servidor: 10.1.29-MariaDB
--- Versão do PHP: 7.1.12
+-- Host: 127.0.0.1
+-- Generation Time: 18-Maio-2018 às 02:16
+-- Versão do servidor: 10.1.31-MariaDB
+-- PHP Version: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `provaonline`
+-- Database: `provaonline`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `alunos`
+-- Estrutura da tabela `alunos`
 --
 
 CREATE TABLE `alunos` (
@@ -36,7 +36,7 @@ CREATE TABLE `alunos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `alunos`
+-- Extraindo dados da tabela `alunos`
 --
 
 INSERT INTO `alunos` (`alu_id`, `alu_num_mat`, `dadospes_id`, `turma_tur_id`) VALUES
@@ -45,7 +45,7 @@ INSERT INTO `alunos` (`alu_id`, `alu_num_mat`, `dadospes_id`, `turma_tur_id`) VA
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `bairros`
+-- Estrutura da tabela `bairros`
 --
 
 CREATE TABLE `bairros` (
@@ -55,7 +55,7 @@ CREATE TABLE `bairros` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `bairros`
+-- Extraindo dados da tabela `bairros`
 --
 
 INSERT INTO `bairros` (`bairro_id`, `bairro_nome`, `cidades_cid_id`) VALUES
@@ -15035,7 +15035,7 @@ INSERT INTO `bairros` (`bairro_id`, `bairro_nome`, `cidades_cid_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `cidades`
+-- Estrutura da tabela `cidades`
 --
 
 CREATE TABLE `cidades` (
@@ -15045,7 +15045,7 @@ CREATE TABLE `cidades` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `cidades`
+-- Extraindo dados da tabela `cidades`
 --
 
 INSERT INTO `cidades` (`cid_id`, `estados_est_id`, `cid_nome`) VALUES
@@ -34398,7 +34398,7 @@ INSERT INTO `cidades` (`cid_id`, `estados_est_id`, `cid_nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `dadospes`
+-- Estrutura da tabela `dadospes`
 --
 
 CREATE TABLE `dadospes` (
@@ -34411,7 +34411,7 @@ CREATE TABLE `dadospes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `dadospes`
+-- Extraindo dados da tabela `dadospes`
 --
 
 INSERT INTO `dadospes` (`dadospes_id`, `dadospes_nome`, `dadospes_cpf`, `end_id`, `usu_id`, `esc_id`) VALUES
@@ -34422,7 +34422,7 @@ INSERT INTO `dadospes` (`dadospes_id`, `dadospes_nome`, `dadospes_cpf`, `end_id`
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `endereco`
+-- Estrutura da tabela `endereco`
 --
 
 CREATE TABLE `endereco` (
@@ -34433,7 +34433,7 @@ CREATE TABLE `endereco` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `endereco`
+-- Extraindo dados da tabela `endereco`
 --
 
 INSERT INTO `endereco` (`end_id`, `end_comp`, `log_id`, `end_num`) VALUES
@@ -34444,7 +34444,7 @@ INSERT INTO `endereco` (`end_id`, `end_comp`, `log_id`, `end_num`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `escola`
+-- Estrutura da tabela `escola`
 --
 
 CREATE TABLE `escola` (
@@ -34455,7 +34455,7 @@ CREATE TABLE `escola` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `escola`
+-- Extraindo dados da tabela `escola`
 --
 
 INSERT INTO `escola` (`esc_id`, `esc_nome`, `esc_status`, `end_id`) VALUES
@@ -34464,7 +34464,7 @@ INSERT INTO `escola` (`esc_id`, `esc_nome`, `esc_status`, `end_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `estados`
+-- Estrutura da tabela `estados`
 --
 
 CREATE TABLE `estados` (
@@ -34475,7 +34475,7 @@ CREATE TABLE `estados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `estados`
+-- Extraindo dados da tabela `estados`
 --
 
 INSERT INTO `estados` (`est_id`, `est_sigla`, `est_nome`, `regiao_regiao_id`) VALUES
@@ -34510,7 +34510,7 @@ INSERT INTO `estados` (`est_id`, `est_sigla`, `est_nome`, `regiao_regiao_id`) VA
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `logradouro`
+-- Estrutura da tabela `logradouro`
 --
 
 CREATE TABLE `logradouro` (
@@ -34521,7 +34521,7 @@ CREATE TABLE `logradouro` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `logradouro`
+-- Extraindo dados da tabela `logradouro`
 --
 
 INSERT INTO `logradouro` (`log_id`, `log_nome`, `bairros_bairro_id`, `log_cep`) VALUES
@@ -39573,7 +39573,7 @@ INSERT INTO `logradouro` (`log_id`, `log_nome`, `bairros_bairro_id`, `log_cep`) 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `materia`
+-- Estrutura da tabela `materia`
 --
 
 CREATE TABLE `materia` (
@@ -39582,7 +39582,7 @@ CREATE TABLE `materia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `materia`
+-- Extraindo dados da tabela `materia`
 --
 
 INSERT INTO `materia` (`mat_id`, `mat_nome`) VALUES
@@ -39593,7 +39593,7 @@ INSERT INTO `materia` (`mat_id`, `mat_nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `paises`
+-- Estrutura da tabela `paises`
 --
 
 CREATE TABLE `paises` (
@@ -39602,7 +39602,7 @@ CREATE TABLE `paises` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `paises`
+-- Extraindo dados da tabela `paises`
 --
 
 INSERT INTO `paises` (`cod_pais`, `nom_pais`) VALUES
@@ -39862,7 +39862,7 @@ INSERT INTO `paises` (`cod_pais`, `nom_pais`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `professor`
+-- Estrutura da tabela `professor`
 --
 
 CREATE TABLE `professor` (
@@ -39872,7 +39872,7 @@ CREATE TABLE `professor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `professor`
+-- Extraindo dados da tabela `professor`
 --
 
 INSERT INTO `professor` (`prof_id`, `prof_re`, `dadospes_id`) VALUES
@@ -39881,7 +39881,7 @@ INSERT INTO `professor` (`prof_id`, `prof_re`, `dadospes_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `professor_has_materia`
+-- Estrutura da tabela `professor_has_materia`
 --
 
 CREATE TABLE `professor_has_materia` (
@@ -39890,7 +39890,7 @@ CREATE TABLE `professor_has_materia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `professor_has_materia`
+-- Extraindo dados da tabela `professor_has_materia`
 --
 
 INSERT INTO `professor_has_materia` (`prof_id`, `mat_id`) VALUES
@@ -39900,7 +39900,7 @@ INSERT INTO `professor_has_materia` (`prof_id`, `mat_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `prova`
+-- Estrutura da tabela `prova`
 --
 
 CREATE TABLE `prova` (
@@ -39911,7 +39911,7 @@ CREATE TABLE `prova` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `prova`
+-- Extraindo dados da tabela `prova`
 --
 
 INSERT INTO `prova` (`pro_id`, `pro_data`, `mat_id`, `prof_id`) VALUES
@@ -39921,7 +39921,7 @@ INSERT INTO `prova` (`pro_id`, `pro_data`, `mat_id`, `prof_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `prova_has_questao`
+-- Estrutura da tabela `prova_has_questao`
 --
 
 CREATE TABLE `prova_has_questao` (
@@ -39930,7 +39930,7 @@ CREATE TABLE `prova_has_questao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `prova_has_questao`
+-- Extraindo dados da tabela `prova_has_questao`
 --
 
 INSERT INTO `prova_has_questao` (`pro_id`, `ques_id`) VALUES
@@ -39946,7 +39946,7 @@ INSERT INTO `prova_has_questao` (`pro_id`, `ques_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `prova_realizada`
+-- Estrutura da tabela `prova_realizada`
 --
 
 CREATE TABLE `prova_realizada` (
@@ -39957,22 +39957,17 @@ CREATE TABLE `prova_realizada` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `prova_realizada`
+-- Extraindo dados da tabela `prova_realizada`
 --
 
 INSERT INTO `prova_realizada` (`alunos_alu_id`, `prova_pro_id`, `prea_dat_hor`, `prea_nota`) VALUES
-(1, 0, '2018-05-13 11:24:00', 2),
-(1, 0, '2018-05-13 11:25:00', 2),
-(1, 0, '2018-05-13 11:27:00', 2),
-(1, 0, '2018-05-13 11:28:00', 2),
-(1, 0, '2018-05-13 11:29:00', 2),
-(1, 0, '2018-05-13 11:29:00', 0),
-(1, 0, '2018-05-13 11:34:00', 2);
+(1, 0, '2018-05-17 20:41:00', 2),
+(1, 1, '2018-05-17 20:44:00', 2);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `questao`
+-- Estrutura da tabela `questao`
 --
 
 CREATE TABLE `questao` (
@@ -39987,7 +39982,7 @@ CREATE TABLE `questao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `questao`
+-- Extraindo dados da tabela `questao`
 --
 
 INSERT INTO `questao` (`ques_id`, `ques_enun`, `A`, `B`, `C`, `D`, `E`, `ques_res`) VALUES
@@ -40003,7 +39998,7 @@ INSERT INTO `questao` (`ques_id`, `ques_enun`, `A`, `B`, `C`, `D`, `E`, `ques_re
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `regiao`
+-- Estrutura da tabela `regiao`
 --
 
 CREATE TABLE `regiao` (
@@ -40013,7 +40008,7 @@ CREATE TABLE `regiao` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `regiao`
+-- Extraindo dados da tabela `regiao`
 --
 
 INSERT INTO `regiao` (`regiao_id`, `regiao_nome`, `paises_pais_id`) VALUES
@@ -40026,7 +40021,7 @@ INSERT INTO `regiao` (`regiao_id`, `regiao_nome`, `paises_pais_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `turma`
+-- Estrutura da tabela `turma`
 --
 
 CREATE TABLE `turma` (
@@ -40035,7 +40030,7 @@ CREATE TABLE `turma` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `turma`
+-- Extraindo dados da tabela `turma`
 --
 
 INSERT INTO `turma` (`tur_id`, `tur_nom`) VALUES
@@ -40044,7 +40039,7 @@ INSERT INTO `turma` (`tur_id`, `tur_nom`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `turma_has_materia`
+-- Estrutura da tabela `turma_has_materia`
 --
 
 CREATE TABLE `turma_has_materia` (
@@ -40053,7 +40048,7 @@ CREATE TABLE `turma_has_materia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `turma_has_materia`
+-- Extraindo dados da tabela `turma_has_materia`
 --
 
 INSERT INTO `turma_has_materia` (`tur_id`, `mat_id`) VALUES
@@ -40066,7 +40061,7 @@ INSERT INTO `turma_has_materia` (`tur_id`, `mat_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuario`
+-- Estrutura da tabela `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -40078,20 +40073,20 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Fazendo dump de dados para tabela `usuario`
+-- Extraindo dados da tabela `usuario`
 --
 
 INSERT INTO `usuario` (`usu_id`, `usu_email`, `usu_senha`, `usu_perfil`, `usu_ativo`) VALUES
-(1, 'adm@gmail.com', '123', 'adm', 'S'),
-(2, 'prof@gmail.com', '123', 'pro', 'S'),
-(3, 'aluno@gmail.com', '123', 'alu', 'S');
+(1, 'adm@gmail.com', '123', 'adm', '1'),
+(2, 'prof@gmail.com', '123', 'pro', '1'),
+(3, 'aluno@gmail.com', '123', 'alu', '1');
 
 --
--- Índices de tabelas apagadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `alunos`
+-- Indexes for table `alunos`
 --
 ALTER TABLE `alunos`
   ADD PRIMARY KEY (`alu_id`),
@@ -40099,20 +40094,20 @@ ALTER TABLE `alunos`
   ADD KEY `fk_alunos_turma1_idx` (`turma_tur_id`);
 
 --
--- Índices de tabela `bairros`
+-- Indexes for table `bairros`
 --
 ALTER TABLE `bairros`
   ADD PRIMARY KEY (`bairro_id`),
   ADD KEY `fk_bairro_cidade1_idx` (`cidades_cid_id`);
 
 --
--- Índices de tabela `cidades`
+-- Indexes for table `cidades`
 --
 ALTER TABLE `cidades`
   ADD KEY `fk_cidade_estado1_idx` (`estados_est_id`);
 
 --
--- Índices de tabela `dadospes`
+-- Indexes for table `dadospes`
 --
 ALTER TABLE `dadospes`
   ADD PRIMARY KEY (`dadospes_id`),
@@ -40121,61 +40116,61 @@ ALTER TABLE `dadospes`
   ADD KEY `fk_dadospes_escola1_idx` (`esc_id`);
 
 --
--- Índices de tabela `endereco`
+-- Indexes for table `endereco`
 --
 ALTER TABLE `endereco`
   ADD PRIMARY KEY (`end_id`),
   ADD KEY `fk_endereco_logradouro1_idx` (`log_id`);
 
 --
--- Índices de tabela `escola`
+-- Indexes for table `escola`
 --
 ALTER TABLE `escola`
   ADD PRIMARY KEY (`esc_id`),
   ADD KEY `fk_escola_endereco1_idx` (`end_id`);
 
 --
--- Índices de tabela `estados`
+-- Indexes for table `estados`
 --
 ALTER TABLE `estados`
   ADD PRIMARY KEY (`est_id`),
   ADD KEY `fk_estado_regiao1_idx` (`regiao_regiao_id`);
 
 --
--- Índices de tabela `logradouro`
+-- Indexes for table `logradouro`
 --
 ALTER TABLE `logradouro`
   ADD PRIMARY KEY (`log_id`),
   ADD KEY `fk_logradouro_bairro1_idx` (`bairros_bairro_id`);
 
 --
--- Índices de tabela `materia`
+-- Indexes for table `materia`
 --
 ALTER TABLE `materia`
   ADD PRIMARY KEY (`mat_id`);
 
 --
--- Índices de tabela `paises`
+-- Indexes for table `paises`
 --
 ALTER TABLE `paises`
   ADD PRIMARY KEY (`cod_pais`);
 
 --
--- Índices de tabela `professor`
+-- Indexes for table `professor`
 --
 ALTER TABLE `professor`
   ADD PRIMARY KEY (`prof_id`),
   ADD KEY `fk_professor_dadospes1_idx` (`dadospes_id`);
 
 --
--- Índices de tabela `professor_has_materia`
+-- Indexes for table `professor_has_materia`
 --
 ALTER TABLE `professor_has_materia`
   ADD KEY `fk_professor_has_materia_materia1_idx` (`mat_id`),
   ADD KEY `fk_professor_has_materia_professor1_idx` (`prof_id`);
 
 --
--- Índices de tabela `prova`
+-- Indexes for table `prova`
 --
 ALTER TABLE `prova`
   ADD PRIMARY KEY (`pro_id`),
@@ -40183,87 +40178,87 @@ ALTER TABLE `prova`
   ADD KEY `fk_prova_professor1_idx` (`prof_id`);
 
 --
--- Índices de tabela `prova_has_questao`
+-- Indexes for table `prova_has_questao`
 --
 ALTER TABLE `prova_has_questao`
   ADD KEY `fk_prova_has_questao_questao1_idx` (`ques_id`),
   ADD KEY `fk_prova_has_questao_prova1_idx` (`pro_id`);
 
 --
--- Índices de tabela `prova_realizada`
+-- Indexes for table `prova_realizada`
 --
 ALTER TABLE `prova_realizada`
   ADD KEY `fk_alunos_has_prova_prova1_idx` (`prova_pro_id`),
   ADD KEY `fk_alunos_has_prova_alunos1_idx` (`alunos_alu_id`);
 
 --
--- Índices de tabela `questao`
+-- Indexes for table `questao`
 --
 ALTER TABLE `questao`
   ADD PRIMARY KEY (`ques_id`);
 
 --
--- Índices de tabela `regiao`
+-- Indexes for table `regiao`
 --
 ALTER TABLE `regiao`
   ADD PRIMARY KEY (`regiao_id`),
   ADD KEY `fk_regiao_pais1_idx` (`paises_pais_id`);
 
 --
--- Índices de tabela `turma`
+-- Indexes for table `turma`
 --
 ALTER TABLE `turma`
   ADD PRIMARY KEY (`tur_id`);
 
 --
--- Índices de tabela `turma_has_materia`
+-- Indexes for table `turma_has_materia`
 --
 ALTER TABLE `turma_has_materia`
   ADD KEY `fk_turma_has_materia_materia1_idx` (`mat_id`),
   ADD KEY `fk_turma_has_materia_turma1_idx` (`tur_id`);
 
 --
--- Índices de tabela `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`usu_id`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `alunos`
+-- AUTO_INCREMENT for table `alunos`
 --
 ALTER TABLE `alunos`
   MODIFY `alu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de tabela `bairros`
+-- AUTO_INCREMENT for table `bairros`
 --
 ALTER TABLE `bairros`
   MODIFY `bairro_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49898;
 
 --
--- AUTO_INCREMENT de tabela `dadospes`
+-- AUTO_INCREMENT for table `dadospes`
 --
 ALTER TABLE `dadospes`
   MODIFY `dadospes_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT de tabela `escola`
+-- AUTO_INCREMENT for table `escola`
 --
 ALTER TABLE `escola`
   MODIFY `esc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de tabela `questao`
+-- AUTO_INCREMENT for table `questao`
 --
 ALTER TABLE `questao`
   MODIFY `ques_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de tabela `usuario`
+-- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
   MODIFY `usu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
